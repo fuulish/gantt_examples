@@ -16,16 +16,25 @@
 
 \begin{document}
 
-\begin{ganttchart}{1}{12}
-\gantttitle{2011}{12} \\
-\gantttitlelist{1,...,12}{1} \\
-\ganttgroup{Group 1}{1}{7} \\
-\ganttbar{Task 1}{1}{2} \\
-\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-\ganttmilestone{Milestone}{7} \ganttnewline
-\ganttbar{Final Task}{8}{12}
-\ganttlink{elem2}{elem3}
-\ganttlink{elem3}{elem4}
+\begin{ganttchart}[
+		vgrid,
+		time slot format=isodate,
+		x unit=0.1cm,
+		]{2021-10-01}{2022-01-31}
+\gantttitlecalendar{year, month} \\
+\ganttbar{T1}{2021-10-01}{2021-10-11} \\
+\ganttbar{T2}{2021-10-21}{2021-11-01}
+\ganttlink{elem0}{elem1}
+
+%\gantttitle{2021}{12} \\
+%\gantttitlelist{1,...,12}{1} \\
+%\ganttgroup{Group 1}{1}{7} \\
+%\ganttbar{Task 1}{1}{2} \\
+%\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+%\ganttmilestone{Milestone}{7} \ganttnewline
+%\ganttbar[progress=50]{Final Task}{8}{12}
+%\ganttlink{elem2}{elem3}
+%\ganttlink{elem3}{elem4}
 \end{ganttchart}
 
 \end{document}
